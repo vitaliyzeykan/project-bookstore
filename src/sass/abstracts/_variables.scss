@@ -1,0 +1,40 @@
+// ___________________everywhere__________________
+
+$secondary-text: #b4afaf;
+$accent-bgc-color: #eac645;
+$button-bgc: #4f2ee8;
+$backdrop-popup: #4f2ee8;
+$fonds-bgc: radial-gradient(
+  183.6% 183.01% at 59.76% -23.42%,
+  #4f2ee8 18.03%,
+  #ffffff 100%
+);
+
+// ___________________light__________________
+$primary-text-light: #111111;
+$categories-text-light: rgba(17, 17, 17, 0.6);
+$message-absent-text-light: rgba(0, 0, 0, 0.6);
+$header-bgc-light: #ffffff;
+$primary-bgc-light: #f6f6f6;
+$switch-bgc-light: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+$accent-text-light: #4f2ee8;
+
+// ___________________dark__________________
+$primary-text-dark: #ffffff;
+$categories-text-dark: rgba(255, 255, 255, 0.6);
+$message-absent-text-dark: rgba(255, 255, 255, 0.6);
+$header-bgc-dark: #111111;
+$primary-bgc-dark: #202024;
+$switch-bgc-dark: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+$accent-text-dark: #eac645;
+
+$font-family: sans-serif;
+$font-main: 'DM Sans';
+
+$pre_mobile: 479.98px;
+$pre_tablet: 767.98px;
+$pre_desktop: 1279.98px;
+
+$mobile: 375px;
+$tablet: 768px;
+$desktop: 1440px;
