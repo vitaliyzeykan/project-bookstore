@@ -1,0 +1,12 @@
+import './js/auth';
+import './js/best-selling-books';
+import './js/booksApi';
+import './js/categories-list-list';
+import './js/dark';
+import './js/header';
+import './js/helpers';
+import './js/modal-card';
+import './js/open-menu';
+import './js/support-list';
+import './js/support-ukraine';
+import './js/jumpUpBtn';
