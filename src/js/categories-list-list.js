@@ -76,6 +76,7 @@ function createMarkupBooks(arr) {
           <div class="book-card">
               <div class="book-card__img-box">
                 <img class="book-card__img"src="${book_image}" alt="${title}" loading="lazy"/>
+                <div class="all-book-popup"> quick view </div>
               </div>
               <div class="info">
                   <h3 class="info-title__item">${truncatedTitle}</h3>

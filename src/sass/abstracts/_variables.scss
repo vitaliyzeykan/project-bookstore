@@ -18,6 +18,7 @@ $header-bgc-light: #ffffff;
 $primary-bgc-light: #f6f6f6;
 $switch-bgc-light: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
 $accent-text-light: #4f2ee8;
+$hover-pagination: #f4f4f4;
 
 // ___________________dark__________________
 $primary-text-dark: #ffffff;
@@ -38,3 +39,7 @@ $pre_desktop: 1279.98px;
 $mobile: 375px;
 $tablet: 768px;
 $desktop: 1440px;
+
+// ___________________ Cubic__________________
+
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);

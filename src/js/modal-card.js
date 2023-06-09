@@ -1,4 +1,5 @@
 import { BookAPI } from './booksApi';
+import { renderShoppingList } from '../shopping-list';
 
 import sprite from '../images/sprite.svg';
 
@@ -47,6 +48,7 @@ function clearModalContent() {
   if (refs.modalCardWrapper) {
     refs.modalCardWrapper.innerHTML = '';
   }
+  renderShoppingList();
 }
 
 const renderBooks = (data, refs) => {
@@ -135,8 +137,6 @@ const renderBooks = (data, refs) => {
 
 function addToShoppingList(book) {
 
-
-  // Отримати поточні дані з localStorage
   const shoppingList = JSON.parse(localStorage.getItem('shoppingList')) ?? [];
 
   const isBookInList = shoppingList.some(item => item._id === book._id);
@@ -185,3 +185,4 @@ document.addEventListener('keydown', function (event) {
     closeModalCard();
   }
 });
+

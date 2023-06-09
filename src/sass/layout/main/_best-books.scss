@@ -107,9 +107,15 @@ width: 335px;
     flex-grow: 0;
     white-space: nowrap;
     cursor: pointer;
+
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: $cubic;
+  
     &:hover, &:focus {
             color: white;
             background-color: #4F2EE8;
+            box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
         }
 }
 

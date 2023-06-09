@@ -91,50 +91,6 @@
 
         <ul class="shoppingListButtonMobile-list list">
           <li class="homeButtonMobile" id="homeButtonMobile">
-            <a class="homeButtonMobile__link" href="/src/index.html">HOME<svg class="homeButtonMobile__icon">
-                <use class="homeButtonMobile__link" href="/src/images/sprite.svg#icon-internetarchive"></use>
-              </svg></a>
-          </li>
-          <li class="shoppingListButtonMobile" id="shoppingListButtonMobile">
-            <a class="shoppingListButtonMobile__link" href="/src/shopping-list.html">
-              SHOPPING LIST<svg class="shoppingListButtonMobile__icon">
-                <use class="shoppingListButtonMobile__link" href="/src/images/sprite.svg#icon-uil_cart"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-
-        <button class="logOutAuthMobile" type="button" id="logOutAuthMobile">
-          <span>Log Out</span>
-          <svg class="logOutAuthMobile__icon" width="20" height="20">
-            <use href="/src/images/sprite.svg#icon-arrow-right"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="mobile-menu js-menu-container">
-    <div class="mobile-menu__container">
-      <img class="mobile-menu-books-imgBg" alt="imagesBg" src="/src/images/header/Group-imgs.png">
-      <div class="mobile-menu-logged-conteiner">
-        <button class="auth_button" type="button" id="signUpAuthMobile">
-          <span>Sign up</span>
-          <svg class="call-to-registration-btn__icon" width="20" height="20">
-            <use href="/src/images/sprite.svg#icon-arrow-right"></use>
-          </svg>
-        </button>
-
-        <button class="userInAuthMobile" id="userInAuthMobile">
-          <svg class="userInAuthMobile__icon" width="37" height="37">
-            <use href="/src/images/sprite.svg#icon-user"></use>
-          </svg>
-          <span id="userNameAuthMobile"></span>
-        </button>
-
-        <ul class="shoppingListButtonMobile-list list">
-          <li class="homeButtonMobile" id="homeButtonMobile">
             <a class="homeButtonMobile__link" href="/src/index.html">HOME</a>
           </li>
           <li class="shoppingListButtonMobile" id="shoppingListButtonMobile">
@@ -157,39 +113,6 @@
     </div>
   </div>
 
-  <div class="mobile-menu js-menu-container">
-    <div class="mobile-menu__container">
-      <div class="mobile-menu-logged-conteiner">
-        <button class="auth_button" type="button" id="signUpAuthMobile"><span>Sign up</span><svg
-            class="call-to-registration-btn__icon" width="20" height="20">
-            <use href="/src/images/sprite.svg#icon-arrow-right"></use>
-          </svg></button>
-
-        <img class="mobile-menu-books-imgBg" alt="imagesBg" src="/src/images/header/Group-imgs.png">
-
-        <button class="userInAuthMobile" id="userInAuthMobile"><svg class="userInAuthMobile__icon" width="37"
-            height="37">
-            <use href="/src/images/sprite.svg#icon-user"></use>
-          </svg><span>Stephen</span></button>
-
-        <ul class="shoppingListButtonMobile-list list">
-
-          <li class="homeButtonMobile" id="homeButtonMobile"><a class="homeButtonMobile__link"
-              href="/src/index.html">HOME</a>
-          </li>
-          <li class="shoppingListButtonMobile" id="shoppingListButtonMobile"><a class="shoppingListButtonMobile__link"
-              href="/src/shopping-list.html">SHOPPING LIST<svg class="shoppingListButtonMobile__icon">
-                <use class="shoppingListButtonMobile__link" href="/src/images/sprite.svg#icon-uil_cart">
-              </svg></a></li>
-
-        </ul>
-        <button class="logOutAuthMobile" type="button" id="logOutAuthMobile">Log Out</span><svg
-            class="logOutAuthMobile__icon" width="20" height="20">
-            <use href="/src/images/sprite.svg#icon-arrow-right"></use>
-          </svg></button>
-      </div>
-    </div>
-  </div>
   <div class="container">
     <div class="container-shopping-support">
       <section class="support-shopping">
@@ -238,7 +161,8 @@
             </picture>
           </div>
         </div>
-        <ul class="shopping-list"></ul>
+        <div class="shopping-list"></div>
+        <div id="pagination" class="tui-pagination pag-container"></div>
         <!-- Сюди будуть додаватися елементи списку покупок -->
       </div>
     </div>

@@ -1,7 +1,9 @@
 .container-shopping-support {
-  display: flex;
-  margin-top: 40px;
-  margin-bottom: 0;
+
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
 }
 
 .support-shopping {
@@ -48,6 +50,12 @@
   letter-spacing: -0.04em;
 
   color: $primary-text-light;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 48px;
+    line-height: 1.083;
+ 
+  }
 }
 
 .span-list {
@@ -78,6 +86,14 @@
 
     text-align: center;
     letter-spacing: -0.02em;
+
+    @media screen and (min-width: $tablet) {
+      width: 349px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 1.333;
+   
+    }
   }
 
   &__image {
@@ -86,6 +102,12 @@
 
     width: 265px;
     height: 198px;
+
+    @media screen and (min-width: $tablet) {
+      width: 322px;
+      height: 241px;
+   
+    }
   }
 }
 
@@ -234,19 +256,8 @@
     }
   }
 
-  //     &__deleteBtn--icon {
-
-  //         width: 28px;
-  //         height: 28px;
-
-  //         @media screen and (min-width: $tablet) {
-
-  //             width: 34px;
-  //             height: 34px;
-
-  //     }
-  // }
 }
+
 
 .card-shopping__listItem {
   mix-blend-mode: luminosity;
@@ -271,7 +282,10 @@
   height: 16px;
 
   @media screen and (min-width: $tablet) {
-    width: 28px;
-    height: 27px;
-  }
+        width: 28px;
+        height: 27px;      
+    }
 }
+
+
+
