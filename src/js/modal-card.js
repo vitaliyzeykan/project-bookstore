@@ -22,8 +22,21 @@ let modalCardClose = '';
 if (isModalOpen) {
   modalCardClose = modalCardWrapper.querySelector('.modal-card_close');
 }
-
+//-----заборона скрола при відкритті модалки---
+window.addEventListener('scroll', () => {
+  document.documentElement.style.setProperty(
+    '--scroll-y',
+    `${window.scrollY}px`
+  );
+});
+//----------------------
 export function openModalCard(bookId) {
+  //-----заборона скрола при відкритті модалки---
+  const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+  const body = document.body;
+  body.style.position = 'fixed';
+  body.style.top = `-${scrollY}`;
+  //-----------------
   if (!isModalOpen) {
     toggleModal();
     const data = bookApi
@@ -35,6 +48,13 @@ export function openModalCard(bookId) {
 }
 
 function closeModalCard() {
+  //-----заборона скрола при відкритті модалки---
+  const body = document.body;
+  const scrollY = body.style.top;
+  body.style.position = '';
+  body.style.top = '';
+  window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  //-----------------
   isModalOpen = false;
   toggleModal();
   clearModalContent();
@@ -62,8 +82,12 @@ const renderBooks = (data, refs) => {
   const shoppingList = JSON.parse(localStorage.getItem('shoppingList')) ?? [];
   const isBookInList = shoppingList.some(item => item._id === book._id);
 
-  const addButtonLabel = isBookInList ? 'Remove from the shopping list' : 'Add to Shopping List';
-  const addListMessage = isBookInList ? 'Congratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.' : '';
+  const addButtonLabel = isBookInList
+    ? 'Remove from the shopping list'
+    : 'Add to Shopping List';
+  const addListMessage = isBookInList
+    ? 'Congratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.'
+    : '';
 
   const bookElMarkup = `
   <div class="modal-card">
@@ -124,19 +148,17 @@ const renderBooks = (data, refs) => {
 
   refs.modalCardWrapper.insertAdjacentHTML('beforeend', bookElMarkup);
 
-  const addToShoppingListBtn = document.querySelector('.button-add-shopping-list');
+  const addToShoppingListBtn = document.querySelector(
+    '.button-add-shopping-list'
+  );
   addToShoppingListBtn.addEventListener('click', () => addToShoppingList(book));
-
 
   const modalCardClose = document.querySelector('.modal-card_close');
   modalCardClose.addEventListener('click', closeModalCard);
   console.log({ modalCardClose });
 };
 
-
-
 function addToShoppingList(book) {
-
   const shoppingList = JSON.parse(localStorage.getItem('shoppingList')) ?? [];
 
   const isBookInList = shoppingList.some(item => item._id === book._id);
@@ -147,7 +169,9 @@ function addToShoppingList(book) {
     localStorage.setItem('shoppingList', JSON.stringify(updatedList));
 
     // Змінити текст кнопки на "Add to Shopping List"
-    const addToShoppingListBtn = document.querySelector('.button-add-shopping-list');
+    const addToShoppingListBtn = document.querySelector(
+      '.button-add-shopping-list'
+    );
 
     addToShoppingListBtn.textContent = 'Add to Shopping List';
 
@@ -165,16 +189,18 @@ function addToShoppingList(book) {
   // Зберегти оновлений список покупок в localStorage
   localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
 
-
   // Змінити текст кнопки на "Remove from the shopping list"
-  const addToShoppingListBtn = document.querySelector('.button-add-shopping-list');
+  const addToShoppingListBtn = document.querySelector(
+    '.button-add-shopping-list'
+  );
 
   addToShoppingListBtn.textContent = 'Remove from the shopping list';
 
   // Відобразити повідомлення про додавання до списку покупок
 
   const message = document.querySelector('.shopping-list-message');
-  message.textContent = 'Congratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.';
+  message.textContent =
+    'Congratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.';
 
   // Відобразити підтвердження додавання до списку покупок
   alert('Book added to Shopping List!');
@@ -185,4 +211,3 @@ document.addEventListener('keydown', function (event) {
     closeModalCard();
   }
 });
-

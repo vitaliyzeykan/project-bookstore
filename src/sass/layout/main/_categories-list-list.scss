@@ -255,6 +255,15 @@
   visibility: visible;
   transform: translateY(0%);
 }
+.book-card__img-box--main-page:hover .all-book-popup {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0%);
+}
+.book-card__img-box--main-page{
+  position: relative;
+    overflow: hidden;
+}
 
 .book-card__img {
   width: 100%;

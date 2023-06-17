@@ -54,6 +54,7 @@ function createMarkupBooksCategories(arr) {
           <div class="book-card--main-page">
               <div class="book-card__img-box--main-page">
                 <img class="book-card__img--main-page"src="${book_image}" alt="${title}" loading="lazy"/>
+                <div class="all-book-popup"> quick view </div>
               </div> 
               <div class="info--main-page">
                   <h3 class="info-title__item--main-page cut-text">${title}</h3>

@@ -1,10 +1,12 @@
 
 .tui-pagination * {
+    display: flex;
+    align-items: center;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
+  }
 
 
 .tui-pagination .tui-is-selected, .tui-pagination strong {
